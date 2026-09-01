@@ -1,0 +1,269 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0d1117;
+  color: #ffffff;
+  font-family:
+    "Segoe UI",
+    system-ui,
+    -apple-system,
+    sans-serif;
+}
+
+/* Hero Background & Layout */
+.hero {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(10, 20, 30, 0.8), rgba(10, 20, 30, 0.9)),
+    url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80")
+      no-repeat center center/cover;
+}
+
+/* Sidebar Left (Social Icons) */
+.sidebar-left .follow-text {
+  writing-mode: vertical-rl;
+  letter-spacing: 3px;
+  font-size: 11px;
+}
+
+.social-icon {
+  color: #8b949e;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #0dcaf0;
+}
+
+/* Sidebar Right (Dots) */
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.active,
+.dot:hover {
+  background-color: #0dcaf0;
+  transform: scale(1.4);
+}
+
+/* Typing Cursor Effect */
+.cursor {
+  animation: blink 0.7s infinite;
+  color: #0dcaf0;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Projects Section */
+.projects-section {
+  background-color: #0d1117;
+}
+
+.project-card {
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  border-color: #0dcaf0 !important;
+  box-shadow: 0 10px 25px rgba(13, 202, 240, 0.15);
+}
+
+.project-img {
+  height: 200px;
+}
+footer small {
+  color: white;
+}
+
+/* Project Filter Buttons */
+
+.filter-btn {
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Project Card Animation */
+
+.project-card {
+  animation: projectFadeIn 0.5s ease;
+}
+
+@keyframes projectFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Load More Button */
+
+#load-more {
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+#load-more:hover {
+  transform: translateY(-3px);
+}
+/* ================================
+   Welcome Animation
+================================ */
+
+.welcome-text {
+  display: inline-block;
+  animation: welcomeFloat 2s ease-in-out infinite;
+  text-shadow: 0 0 10px rgba(13, 202, 240, 0.35);
+}
+
+@keyframes welcomeFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+
+/* ================================
+   Project Button Arrow
+================================ */
+
+.project-btn i {
+  display: inline-block;
+  animation: arrowMove 1s ease-in-out infinite;
+}
+
+@keyframes arrowMove {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+/* حركة أقوى عند المرور */
+
+.project-btn:hover i {
+  animation-duration: 0.4s;
+}
+
+/* ================================
+   Project Button Arrow
+================================ */
+
+.project-btn i {
+  display: inline-block;
+  animation: arrowMove 1.5s ease-in-out infinite;
+}
+
+@keyframes arrowMove {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+/* حركة أقوى عند المرور */
+
+.project-btn:hover i {
+  animation-duration: 1.5s;
+}
+/* ================================
+   Welcome
+================================ */
+
+.welcome-text {
+  display: inline-block;
+  position: relative;
+
+  color: #0dcaf0;
+  font-size: 1.3rem;
+  font-weight: 500;
+
+  letter-spacing: 6px;
+  text-transform: uppercase;
+
+  margin-bottom: 12px;
+  padding: 0 18px;
+
+  text-shadow:
+    0 0 8px rgba(13, 202, 240, 0.3);
+
+  animation: welcomeFloat 2.5s ease-in-out infinite;
+}
+
+/* خطوط جانبية صغيرة */
+
+.welcome-text::before,
+.welcome-text::after {
+  content: "";
+  position: absolute;
+
+  top: 50%;
+  width: 35px;
+  height: 1px;
+
+  background: #0dcaf0;
+  opacity: 0.7;
+}
+
+.welcome-text::before {
+  right: 100%;
+}
+
+.welcome-text::after {
+  left: 100%;
+}
+
+/* حركة ناعمة */
+
+@keyframes welcomeFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+}

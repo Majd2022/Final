@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Majd Qasem - Portfolio</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- FontAwesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/CSS/style.css" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header
+      class="hero d-flex flex-column justify-content-between position-relative"
+    >
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-lg px-4 px-md-5 py-4 w-100">
+        <div class="container-fluid p-0">
+          <a class="navbar-brand logo fw-bold fs-3" href="#"
+            >Folio<span class="text-info">.</span></a
+          >
+          <button
+            class="navbar-toggler border-0 shadow-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <i class="fa-solid fa-bars-staggered text-info fs-3"></i>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav gap-3 text-center py-3 py-lg-0">
+              <li class="nav-item">
+                <a class="nav-link text-white active" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white-50" href="#projects">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white-50" href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Social Media Sidebar (Desktop Only) -->
+      <aside
+        class="sidebar-left d-none d-lg-flex flex-column align-items-center position-absolute start-0 top-50 translate-middle-y ms-4"
+      >
+        <span class="follow-text text-uppercase text-muted mb-3"
+          >Follow Me</span
+        >
+        <div class="d-flex flex-column gap-3">
+          <a href="#" class="social-icon"
+            ><i class="fa-brands fa-facebook-f"></i
+          ></a>
+          <a href="https://www.x.com" class="social-icon"
+            ><i class="fa-brands fa-x-twitter"></i
+          ></a>
+
+          <a href="#" class="social-icon"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="#" class="social-icon"
+            ><i class="fa-brands fa-linkedin-in"></i
+          ></a>
+        </div>
+      </aside>
+
+      <!-- Hero Content -->
+      <div class="container text-center my-auto py-5 hero-content">
+        <div class="hero-glow glow-one"></div>
+        <div class="hero-glow glow-two"></div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <!-- Welcome -->
+            <div class="welcome">
+              <span class="welcome-line"></span>
+
+              <span class="welcome-text"> Welcome to my portfolio </span>
+
+              <span class="welcome-line"></span>
+            </div>
+
+            <!-- Name -->
+            <h1 class="hero-name display-2 fw-bold text-white mb-3">
+              Majd Qasem
+            </h1>
+
+            <!-- Typing -->
+            <p class="fs-3 text-light font-weight-light mb-4">
+              I'm
+              <span class="typed-text text-info fw-semibold" id="typing"></span>
+
+              <span class="cursor">|</span>
+            </p>
+
+            <!-- Button -->
+            <div class="d-flex justify-content-center gap-3">
+              <a
+                href="#projects"
+                class="btn btn-info text-white rounded-pill px-4 py-2 fw-semibold shadow-sm project-btn"
+              >
+                Show My Projects
+                <i class="fa-solid fa-arrow-down ms-2"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation Dots (Desktop Only) -->
+      <aside
+        class="sidebar-right d-none d-lg-flex flex-column position-absolute end-0 top-50 translate-middle-y me-4 gap-3"
+      >
+        <div class="dot active"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </aside>
+    </header>
+    <!-- Main Content -->
+    <main>
+      <!-- Projects Section -->
+      <section class="projects-section py-5" id="projects">
+        <div class="container py-4">
+          <header class="text-center mb-4">
+            <h2 class="display-5 fw-bold text-white">Featured Projects</h2>
+
+            <p class="text-muted fs-5">My recent work and web applications</p>
+          </header>
+
+          <!-- Project Filters -->
+          <div class="d-flex justify-content-center flex-wrap gap-2 mb-5">
+            <button
+              class="btn btn-info rounded-pill filter-btn active"
+              data-filter="all"
+            >
+              All
+            </button>
+
+            <button
+              class="btn btn-outline-info rounded-pill filter-btn"
+              data-filter="html-css"
+            >
+              HTML / CSS
+            </button>
+
+            <button
+              class="btn btn-outline-info rounded-pill filter-btn"
+              data-filter="javascript"
+            >
+              JavaScript
+            </button>
+
+            <button
+              class="btn btn-outline-info rounded-pill filter-btn"
+              data-filter="bootstrap"
+            >
+              Bootstrap
+            </button>
+          </div>
+
+          <!-- Projects Container -->
+          <div class="row g-4" id="projects-container"></div>
+
+          <!-- Load More -->
+          <div class="text-center mt-5">
+            <button
+              id="load-more"
+              class="btn btn-outline-info rounded-pill px-4"
+            >
+              Load More
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer
+      class="text-center py-4 text-muted border-top border-secondary bg-dark"
+    >
+      <small>
+        &copy; <span id="current-year"></span> Majd Qasem. All rights reserved.
+      </small>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="./JS/main.js"></script>
+  </body>
+</html>
