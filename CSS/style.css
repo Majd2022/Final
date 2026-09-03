@@ -1,7 +1,15 @@
+/* ================================
+   Global Styles
+================================ */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -14,16 +22,25 @@ body {
     sans-serif;
 }
 
-/* Hero Background & Layout */
+
+/* ================================
+   Hero
+================================ */
+
 .hero {
   min-height: 100vh;
+
   background:
     linear-gradient(rgba(10, 20, 30, 0.8), rgba(10, 20, 30, 0.9)),
     url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80")
-      no-repeat center center/cover;
+      no-repeat center center / cover;
 }
 
-/* Sidebar Left (Social Icons) */
+
+/* ================================
+   Social Sidebar
+================================ */
+
 .sidebar-left .follow-text {
   writing-mode: vertical-rl;
   letter-spacing: 3px;
@@ -40,12 +57,18 @@ body {
   color: #0dcaf0;
 }
 
-/* Sidebar Right (Dots) */
+
+/* ================================
+   Navigation Dots
+================================ */
+
 .dot {
   width: 8px;
   height: 8px;
+
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 50%;
+
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -56,158 +79,7 @@ body {
   transform: scale(1.4);
 }
 
-/* Typing Cursor Effect */
-.cursor {
-  animation: blink 0.7s infinite;
-  color: #0dcaf0;
-}
 
-@keyframes blink {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-}
-
-/* Projects Section */
-.projects-section {
-  background-color: #0d1117;
-}
-
-.project-card {
-  transition:
-    transform 0.3s ease,
-    border-color 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-8px);
-  border-color: #0dcaf0 !important;
-  box-shadow: 0 10px 25px rgba(13, 202, 240, 0.15);
-}
-
-.project-img {
-  height: 200px;
-}
-footer small {
-  color: white;
-}
-
-/* Project Filter Buttons */
-
-.filter-btn {
-  transition: all 0.3s ease;
-}
-
-.filter-btn:hover {
-  transform: translateY(-2px);
-}
-
-/* Project Card Animation */
-
-.project-card {
-  animation: projectFadeIn 0.5s ease;
-}
-
-@keyframes projectFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Load More Button */
-
-#load-more {
-  transition: all 0.3s ease;
-  font-weight: 500;
-}
-
-#load-more:hover {
-  transform: translateY(-3px);
-}
-/* ================================
-   Welcome Animation
-================================ */
-
-.welcome-text {
-  display: inline-block;
-  animation: welcomeFloat 2s ease-in-out infinite;
-  text-shadow: 0 0 10px rgba(13, 202, 240, 0.35);
-}
-
-@keyframes welcomeFloat {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-5px);
-  }
-}
-
-
-/* ================================
-   Project Button Arrow
-================================ */
-
-.project-btn i {
-  display: inline-block;
-  animation: arrowMove 1s ease-in-out infinite;
-}
-
-@keyframes arrowMove {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(5px);
-  }
-}
-
-/* حركة أقوى عند المرور */
-
-.project-btn:hover i {
-  animation-duration: 0.4s;
-}
-
-/* ================================
-   Project Button Arrow
-================================ */
-
-.project-btn i {
-  display: inline-block;
-  animation: arrowMove 1.5s ease-in-out infinite;
-}
-
-@keyframes arrowMove {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(5px);
-  }
-}
-
-/* حركة أقوى عند المرور */
-
-.project-btn:hover i {
-  animation-duration: 1.5s;
-}
 /* ================================
    Welcome
 ================================ */
@@ -226,24 +98,22 @@ footer small {
   margin-bottom: 12px;
   padding: 0 18px;
 
-  text-shadow:
-    0 0 8px rgba(13, 202, 240, 0.3);
+  text-shadow: 0 0 8px rgba(13, 202, 240, 0.3);
 
   animation: welcomeFloat 2.5s ease-in-out infinite;
 }
 
-/* خطوط جانبية صغيرة */
-
 .welcome-text::before,
 .welcome-text::after {
   content: "";
-  position: absolute;
 
+  position: absolute;
   top: 50%;
+
   width: 35px;
   height: 1px;
 
-  background: #0dcaf0;
+  background-color: #0dcaf0;
   opacity: 0.7;
 }
 
@@ -255,7 +125,165 @@ footer small {
   left: 100%;
 }
 
-/* حركة ناعمة */
+
+/* ================================
+   Typing Cursor
+================================ */
+
+.cursor {
+  color: #0dcaf0;
+  animation: blink 0.7s infinite;
+}
+
+
+/* ================================
+   Project Button
+================================ */
+
+.project-btn i {
+  display: inline-block;
+  animation: arrowMove 1.5s ease-in-out infinite;
+}
+
+.project-btn:hover i {
+  animation-duration: 1.5s;
+}
+
+
+/* ================================
+   Projects Section
+================================ */
+
+.projects-section {
+  background-color: #0d1117;
+}
+
+
+/* ================================
+   Project Cards
+================================ */
+
+.project-card {
+  animation: projectFadeIn 0.5s ease;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+
+  border-color: #0dcaf0 !important;
+
+  box-shadow: 0 10px 25px rgba(13, 202, 240, 0.15);
+}
+
+.project-img {
+  height: 200px;
+}
+
+
+/* ================================
+   Project Filters
+================================ */
+
+.filter-btn {
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  transform: translateY(-2px);
+}
+
+
+/* ================================
+   Load More Button
+================================ */
+
+#load-more {
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+#load-more:hover {
+  transform: translateY(-3px);
+}
+
+
+/* ================================
+   Footer
+================================ */
+
+footer small {
+  color: #ffffff;
+}
+
+
+/* ================================
+   Back To Home
+================================ */
+
+.back-to-home {
+  position: fixed;
+
+  right: 25px;
+  bottom: 25px;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #0dcaf0;
+  background-color: rgba(13, 17, 23, 0.8);
+
+  border: 1px solid rgba(13, 202, 240, 0.5);
+  border-radius: 50%;
+
+  text-decoration: none;
+
+  z-index: 1000;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transform: translateY(10px);
+
+  transition: all 0.3s ease;
+}
+
+.back-to-home.show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+
+  transform: translateY(0);
+}
+
+.back-to-home i {
+  animation: arrowUp 1.5s ease-in-out infinite;
+}
+
+
+/* ================================
+   Animations
+================================ */
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
 
 @keyframes welcomeFloat {
   0%,
@@ -265,5 +293,115 @@ footer small {
 
   50% {
     transform: translateY(-4px);
+  }
+}
+
+@keyframes arrowMove {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+@keyframes arrowUp {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes projectFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ================================
+   Mobile
+================================ */
+
+@media (max-width: 991.98px) {
+
+  /* Hero */
+
+  .hero {
+    min-height: 100vh;
+    justify-content: flex-start !important;
+  }
+
+
+  /* Navbar */
+
+  .navbar {
+    padding-top: 15px !important;
+    padding-bottom: 5px !important;
+  }
+
+
+  /* Hero Content */
+
+  .hero-content {
+    min-height: calc(100vh - 70px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+
+    padding-top: 0 !important;
+    padding-bottom: 40px !important;
+  }
+
+
+  /* Welcome */
+
+  .welcome-text {
+    font-size: 1rem;
+    letter-spacing: 3px;
+  }
+
+  .welcome-text::before,
+  .welcome-text::after {
+    width: 20px;
+  }
+
+
+  /* Name */
+
+  .hero-name {
+    font-size: 2.5rem;
+    margin-bottom: 12px !important;
+  }
+
+
+  /* Typing */
+
+  .hero-content p {
+    font-size: 1.3rem !important;
+    margin-bottom: 25px !important;
+  }
+
+
+  /* Project Button */
+
+  .project-btn {
+    padding: 9px 22px !important;
   }
 }
